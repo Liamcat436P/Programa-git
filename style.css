@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+  *{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+}
+ .header{
+ 	background-color: white;
+ }
+ .menu{
+ 	display: flex;
+ 	align-items: center;
+    flex-direction: row-reverse;
+ }
+.logo{
+	color: #909497;
+	font-size: 71px;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+.footer {
+	border-top: 1px solid #1B1B1D2B;
+	padding: 20px 0;
+}
+
+.footer-content{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer-content ul {
+	display: flex;
+}
+.footer-content ul li a {
+	display: block;
+    padding: 10px;
+    color: 1B1B1D;
+    font-size: 18px;
+    font-weight: 600;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* Variables para cambiar colores rápido */
+:root {
+    --primary-color: #6F36E8; /* El morado de tu diseño */
+    --bg-gray: #D9D9D9;
+    --white: #ffffff;
+}
+.services{
+	padding: 24px 0;
+	text-align: center;
+}
+h3{
+	color: #e4e4ef;
+	font-size: 24px;
+}
+h2{
+	color: #4444e6;
+	font-size: 40px;
+}
+.services-14{
+	display: flex;
+	justify-content: space-between;
+	padding: 80px o;
+    flex-direction: column;
+}
+.services-content1 {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 50px;
+}
+.services-content1 {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+    box-shadow: 0 0 20px rgba(89, 34, 207, 0.781);
+    border-radius: 60px;
+    background-color: #585858;
+}
+.services-content1 img {
+    width: 180px;
+	height: 180px;
+    border-radius: 20%;
+	margin-bottom: 5px;
+}
+.services-1{
+	display: flex;
+	justify-content: space-between;
+	padding: 80px o;
+}
+.services-content {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 50px;
+}
+.services-content {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+    body {
+        /* Centramos el contenedor en medio de la pantalla */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column; /* Evita que los elementos se pongan uno al lado del otro */
+    }
+
+
+/* Contenedor del Celular */
+.app-container {
+    width: 900%;
+    max-width: 100px; /* Tamaño típico de celular */
+    height: 1vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.header {
+    grid-column: 2; /* Movemos el logo al lado derecho */
+    justify-content: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    display: flex;
+	justify-content: space-between;
+	padding: 80px o;
+}
+
+/* El cuadro gris redondeado de tu captura */
+.main-content {
+    background-color: var(--bg-gray);
+    flex-grow: 1;
+    border-radius: 0 80px 80px 0; /* Solo redondeado a la derecha como en tu foto */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 40px;
+    display: flex;
+	justify-content: space-between;
+	padding: 80px o;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-primary {
+    transition: all 0.3s ease;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.btn-primary:hover {
+    background-color: #5a2bbd; /* Un morado un poco más oscuro */
+    transform: translateY(-3px); /* El botón sube un poquito */
+    box-shadow: 0 5px 15px rgba(111, 54, 232, 0.4); /* Sombra morada */
+}
+
+.btn-primary:active {
+    transform: scale(0.95);
+}
+
+
+/* --- RESPONSIVE (PC) --- */
+@media (min-width: 768px) {
+    .app-container {
+        max-width: 1000px; /* Se expande en computador */
+    }
+    
+    .main-content {
+        border-radius: 40px; /* Menos exagerado en PC */
+        flex-direction: row; /* Podrías poner los botones a un lado */
+    }
+}
