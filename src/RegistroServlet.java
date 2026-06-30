@@ -5,12 +5,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/registrar") // Esta es la ruta que pondrás en tu HTML
+@WebServlet("/registrar") // Esta es la ruta que pondrás en el action de tu formulario HTML
 public class RegistroServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
         
-        // 1. Recibir los datos del formulario
+        // Configurar la codificación para que acepte tildes y caracteres especiales desde el formulario
+        request.setCharacterEncoding("UTF-8");
+        
+        // 1. Recibir los datos del formulario HTML
         String nombre = request.getParameter("nombre");
         String correo = request.getParameter("correo");
         String telefono = request.getParameter("telefono");
@@ -18,12 +21,17 @@ public class RegistroServlet extends HttpServlet {
         String servicio = request.getParameter("tipo_servicio");
         String cedula = request.getParameter("cedula");
         String fecha = request.getParameter("fecha_nacimiento");
+        String contrasena = request.getParameter("contrasena"); // Nuevo parámetro capturado
 
-        // 2. Llamar a tu lógica que ya creaste en GestorUsuarios
+        // 2. Llamar a la lógica actualizada en GestorUsuarios (ahora con 8 parámetros)
         GestorUsuarios gestor = new GestorUsuarios();
-        gestor.registrarUsuario(nombre, correo, telefono, empresa, servicio, cedula, fecha);
+        gestor.registrarUsuario(nombre, correo, telefono, empresa, servicio, cedula, fecha, contrasena);
 
-        // 3. Responder al usuario
+        // Configurar el tipo de respuesta del servidor
+        response.setContentType("text/html;charset=UTF-8");
+
+        // 3. Responder al usuario en el navegador
         response.getWriter().println("<h1>¡Registro exitoso para " + nombre + "!</h1>");
+        response.getWriter().println("<a href='index.html'>Volver al formulario</a>");
     }
 }

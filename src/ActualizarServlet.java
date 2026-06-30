@@ -19,10 +19,11 @@ public class ActualizarServlet extends HttpServlet {
         String empresa = request.getParameter("empresa");
         String servicio = request.getParameter("servicio");
         String nacimiento = request.getParameter("nacimiento");
+        String contrasena = request.getParameter("contrasena");
 
         // Llamamos al gestor para actualizar
         GestorUsuarios gestor = new GestorUsuarios();
-        gestor.actualizarUsuario(cedula, nombre, correo, telefono, empresa, servicio, nacimiento);
+        gestor.actualizarUsuario(cedula, nombre, correo, telefono, empresa, servicio, nacimiento, contrasena);
 
         // Volvemos a la lista
         response.sendRedirect("listar.jsp");

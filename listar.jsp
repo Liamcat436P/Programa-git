@@ -34,6 +34,7 @@
             <th>Empresa</th>
             <th>Servicio</th>
             <th>Nacimiento</th>
+            <th>Contraseña</th>
             <th>Acciones</th>
         </tr>
         <%
@@ -50,6 +51,7 @@
             <td><%= usuario[4] %></td>
             <td><%= usuario[5] %></td>
             <td><%= usuario[6] %></td>
+            <td><%= usuario[7] %></td>
             <td>
                 <a href="editar?cedula=<%= usuario[0] %>" class="btn-editar">Editar</a>
                 <a href="eliminar?cedula=<%= usuario[0] %>" class="btn-eliminar" onclick="return confirm('¿Seguro?')">Eliminar</a>

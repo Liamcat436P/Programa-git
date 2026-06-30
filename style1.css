@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Usuario</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
         /* Variables de tu diseño original */
         :root {
@@ -119,62 +112,3 @@
         .back-link:hover {
             color: var(--primary-color);
         }
-    </style>
-</head>
-<body>
-
-<div class="form-container">
-    <h2>Regístrate</h2>
-    
-    <form action="registrar" method="POST">
-        <div class="form-group">
-            <label for="nombre">Nombre Completo</label>
-            <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez">
-        </div>
-
-        <div class="form-group">
-            <label for="cedula">Cédula / Documento</label>
-            <input type="text" id="cedula" name="cedula" required placeholder="Ej. 12345678">
-        </div>
-
-        <div class="form-group">
-            <label for="correo">Correo Electrónico</label>
-            <input type="email" id="correo" name="correo" required placeholder="ejemplo@correo.com">
-        </div>
-
-        <div class="form-group">
-            <label for="telefono">Teléfono</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="Ej. 3001234567">
-        </div>
-
-        <div class="form-group">
-            <label for="empresa">Empresa / Negocio (Opcional)</label>
-            <input type="text" id="empresa" name="empresa" placeholder="Nombre de la empresa">
-        </div>
-
-        <div class="form-group">
-            <label for="tipo_servicio">Tipo de Servicio</label>
-            <select id="tipo_servicio" name="tipo_servicio">
-                <option value="diseno_grafico">Diseño Gráfico / Identidad Visual</option>
-                <option value="desarrollo_software">Desarrollo de Software</option>
-                <option value="consultoria">Consultoría Técnica</option>
-            </select>
-        </div>
-
-        <div class="form-group">
-            <label for="fecha_nacimiento">Fecha de Nacimiento</label>
-            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
-        </div>
-        <div class="form-group">
-            <label for="cedula">Contraseña</label>
-            <input type="password" id="contrasena" name="contrasena" required placeholder="******">
-        </div>
-
-        <button type="submit">Guardar en Base de Datos</button>
-    </form>
-
-    <a href="index.html" class="back-link">← Volver al inicio</a>
-</div>
-
-</body>
-</html>

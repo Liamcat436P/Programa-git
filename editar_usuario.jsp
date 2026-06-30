@@ -24,6 +24,9 @@
     
     <label>Fecha Nacimiento:</label>
     <input type="date" name="nacimiento" value="<%= u[6] %>">
+
+    <label>Contraseña:</label>
+    <input type="text" name="contrasena" value="<%= u[7] %>">
     
     <button type="submit">Guardar Cambios</button>
 </form>
